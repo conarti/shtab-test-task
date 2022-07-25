@@ -3,19 +3,17 @@
     <div class="auth-layout__content">
       <router-view />
     </div>
-    <div class="auth-layout__illustration">
-      <AuthIllustration />
-    </div>
-  </div>
+    <AuthLayoutIllustration />
+</div>
 </template>
 
 <script>
-import AuthIllustration from '@/components/AuthIllustration.vue';
+import AuthLayoutIllustration from '@/components/AuthLayoutIllustration.vue';
 
 export default {
   name: 'AuthLayout',
   components: {
-    AuthIllustration,
+    AuthLayoutIllustration,
   },
 };
 </script>
