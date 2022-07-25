@@ -2,22 +2,22 @@
 
 ## Project setup
 ```
-npm install
+make install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+make serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+make build
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+make lint
 ```
 
 ### Customize configuration
