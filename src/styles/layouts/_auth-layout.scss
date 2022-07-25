@@ -1,0 +1,8 @@
+.auth-layout {
+  display: flex;
+
+  &__content,
+  &__illustration {
+    flex: 50% 1 1;
+  }
+}
