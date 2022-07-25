@@ -19,3 +19,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.auth-layout {
+  display: flex;
+
+  &__content,
+  &__illustration {
+    flex: 50% 1 1;
+  }
+}
+</style>
