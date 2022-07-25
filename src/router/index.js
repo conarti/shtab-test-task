@@ -6,11 +6,17 @@ const routes = [
     path: '/',
     name: 'profile',
     component: ProfileView,
+    meta: {
+      layout: 'main',
+    },
   },
   {
     path: '/login',
     name: 'login',
     component: () => import(/* webpackChunkName: "login" */ '@/views/LoginView.vue'),
+    meta: {
+      layout: 'auth',
+    },
   },
 ];
 
