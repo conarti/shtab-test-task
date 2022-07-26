@@ -19,6 +19,14 @@
       <AuthIllustrationIcon icon="fire" size="big" />
       <AuthIllustrationIcon icon="shtab-logo" size="biggest" />
     </div>
+
+    <h2 class="auth-illustration-title">
+      shtab.app
+    </h2>
+    <p class="auth-illustration-description">
+      Держите дела в порядке: планируйте и обсуждайте задачи, отслеживайте происходящее в команде
+      и оставайтесь в курсе всех важных мелочей.
+    </p>
   </div>
 </template>
 
