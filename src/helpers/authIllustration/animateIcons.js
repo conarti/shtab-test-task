@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 
-const animateEnter = (el) => {
-  gsap.fromTo(el, {
+const animateEnter = (elements) => {
+  gsap.fromTo(elements, {
     opacity: 0,
   }, {
     duration: 0.25,
@@ -10,8 +10,8 @@ const animateEnter = (el) => {
   });
 };
 
-const animateLeave = (el, onComplete) => {
-  gsap.fromTo(el, {
+const animateLeave = (elements, onComplete) => {
+  gsap.fromTo(elements, {
     opacity: 1,
   }, {
     duration: 0.25,
