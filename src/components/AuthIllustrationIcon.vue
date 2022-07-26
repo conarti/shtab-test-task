@@ -1,7 +1,7 @@
 <template>
   <div
     class="auth-illustration-icon"
-    :class="`auth-illustration-icon--is-${size}`"
+    :class="`auth-illustration-icon--is-${icon}`"
   >
     <AppIcon
       :name="icon"
