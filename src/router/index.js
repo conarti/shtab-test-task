@@ -1,22 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import ProfileView from '@/views/ProfileView.vue';
 
 const routes = [
   {
-    path: '/',
-    name: 'profile',
-    component: ProfileView,
-    meta: {
-      layout: 'main',
-    },
+    path: '',
+    name: 'main-layout',
+    component: () => import(/* webpackChunkName: "auth-layout" */ '@/layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'profile',
+        component: () => import(/* webpackChunkName: "profile" */ '@/views/ProfileView.vue'),
+      },
+    ],
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import(/* webpackChunkName: "login" */ '@/views/LoginView.vue'),
-    meta: {
-      layout: 'auth',
-    },
+    path: '/auth',
+    name: 'auth-layout',
+    component: () => import(/* webpackChunkName: "auth-layout" */ '@/layouts/AuthLayout.vue'),
+    children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: () => import(/* webpackChunkName: "login" */ '@/views/LoginView.vue'),
+      },
+    ],
   },
 ];
 
