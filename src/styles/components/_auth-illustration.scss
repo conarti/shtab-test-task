@@ -1,0 +1,37 @@
+.auth-illustration {
+  background: $bg-gradient;
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+
+    background: $illustration-icon-bg;
+  }
+
+  &-icon--is-smallest {
+    width: 50px;
+    height: 50px;
+  }
+
+  &-icon--is-small {
+    width: 60px;
+    height: 60px;
+  }
+
+  &-icon--is-medium {
+    width: 83px;
+    height: 83px;
+  }
+
+  &-icon--is-big {
+    width: 117px;
+    height: 117px;
+  }
+
+  &-icon--is-biggest {
+    width: 242px;
+    height: 242px;
+  }
+}
