@@ -4,7 +4,7 @@
     class="icon"
     :class="[`icon--is-${size}`, `icon--is-${color}`]"
   >
-    <use :xlink:href="`./sprite.svg#${this.name}`"></use>
+    <use :xlink:href="`/sprite.svg#${this.name}`"></use>
   </svg>
 </template>
 
