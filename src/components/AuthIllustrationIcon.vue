@@ -23,6 +23,9 @@ export default {
     icon: {
       type: String,
       required: true,
+      validate(value) {
+        return params.components.authIllustrationIcon.icons.includes(value);
+      },
     },
     size: {
       type: String,

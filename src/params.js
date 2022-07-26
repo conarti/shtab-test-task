@@ -6,5 +6,8 @@ export default {
       colors: ['white'],
       defaultColor: 'white',
     },
+    authIllustrationIcon: {
+      icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
+    },
   },
 };
