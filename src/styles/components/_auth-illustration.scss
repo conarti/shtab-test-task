@@ -6,6 +6,15 @@
 
   overflow: hidden;
 
+  &-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+
   &-icon {
     position: absolute;
 
@@ -113,5 +122,49 @@
 
     width: 65px;
     height: 65px;
+  }
+
+  &-ellipse {
+    position: absolute;
+
+    border-radius: 50rem;
+
+    background: $illustration-ellipse-bg;
+  }
+
+  &-ellipse--is-small {
+    left: 282px;
+    top: 434px;
+    z-index: 4;
+
+    width: 700px;
+    height: 700px;
+  }
+
+  &-ellipse--is-medium {
+    left: 74px;
+    top: 250px;
+    z-index: 1;
+
+    width: 935px;
+    height: 935px;
+  }
+
+  &-ellipse--is-big {
+    left: -134px;
+    top: 66px;
+    z-index: 2;
+
+    width: 935px;
+    height: 935px;
+  }
+
+  &-ellipse--is-biggest {
+    left: -249px;
+    top: -73px;
+    z-index: 3;
+
+    width: 1090px;
+    height: 1090px;
   }
 }
