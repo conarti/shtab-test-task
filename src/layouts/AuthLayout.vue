@@ -4,7 +4,7 @@
       <router-view />
     </div>
     <div class="auth-layout__illustration">
-      <AuthIllustration />
+      <AuthIllustration ref="illustration" />
     </div>
 </div>
 </template>
@@ -16,6 +16,14 @@ export default {
   name: 'AuthLayout',
   components: {
     AuthIllustration,
+  },
+  beforeRouteEnter(_to, _from, next) {
+    next((vm) => {
+      vm.$refs.illustration.animateEnter();
+    });
+  },
+  beforeRouteLeave(_to, _from, next) {
+    this.$refs.illustration.animateLeave(next);
   },
 };
 </script>

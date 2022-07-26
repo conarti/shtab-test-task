@@ -13,11 +13,13 @@
     <AuthIllustrationSquare size="biggest" />
 
     <div class="auth-illustration-icons">
-      <AuthIllustrationIcon icon="alarm" size="smallest" />
-      <AuthIllustrationIcon icon="lock" size="small" />
-      <AuthIllustrationIcon icon="chat" size="medium" />
-      <AuthIllustrationIcon icon="fire" size="big" />
-      <AuthIllustrationIcon icon="shtab-logo" size="biggest" />
+      <AuthIllustrationIcon
+        v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
+        :key="idx"
+        :icon="icon"
+        :size="size"
+        ref="icons"
+      />
     </div>
 
     <h2 class="auth-illustration-title">
@@ -31,16 +33,50 @@
 </template>
 
 <script>
+import animateIcons from '@/helpers/authIllustration/animateIcons';
+import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
 import AuthIllustrationIcon from '@/components/AuthIllustrationIcon.vue';
 import AuthIllustrationSquare from '@/components/AuthIllustrationSquare.vue';
 
 export default {
   name: 'AuthIllustration',
+  ILLUSTRATION_ICONS: [
+    {
+      icon: 'alarm',
+      size: 'smallest',
+    },
+    {
+      icon: 'lock',
+      size: 'small',
+    },
+    {
+      icon: 'chat',
+      size: 'medium',
+    },
+    {
+      icon: 'fire',
+      size: 'big',
+    },
+    {
+      icon: 'shtab-logo',
+      size: 'biggest',
+    },
+  ],
   components: {
     AuthIllustrationEllipse,
     AuthIllustrationIcon,
     AuthIllustrationSquare,
+  },
+  methods: {
+    animateEnter() {
+      const iconElements = getElementsFromRefs(this.$refs.icons);
+      animateIcons(iconElements, 'enter');
+    },
+    animateLeave(routeNext) {
+      const iconElements = getElementsFromRefs(this.$refs.icons);
+      animateIcons(iconElements, 'leave', routeNext);
+    },
   },
 };
 </script>
