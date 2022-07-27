@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import animateIcons from '@/helpers/authIllustration/animateIcons';
+import animate from '@/helpers/authIllustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
 import AuthIllustrationIcon from '@/components/AuthIllustrationIcon.vue';
@@ -71,13 +71,13 @@ export default {
     AuthIllustrationSquare,
   },
   methods: {
-    animateEnter() {
+    animate(mode, next) {
       const iconElements = getElementsFromRefs(this.$refs.icons);
-      animateIcons(iconElements, 'enter');
-    },
-    animateLeave(routeNext) {
-      const iconElements = getElementsFromRefs(this.$refs.icons);
-      animateIcons(iconElements, 'leave', routeNext);
+      animate({
+        iconElements,
+        mode,
+        onComplete: next,
+      });
     },
   },
 };

@@ -10,4 +10,10 @@ export default {
       icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
     },
   },
+  animation: {
+    modes: {
+      enter: 'enter',
+      leave: 'leave',
+    },
+  },
 };

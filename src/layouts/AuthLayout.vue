@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import params from '@/params';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 
 export default {
@@ -19,11 +20,11 @@ export default {
   },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
-      vm.$refs.illustration.animateEnter();
+      vm.$refs.illustration.animate(params.animation.modes.enter);
     });
   },
   beforeRouteLeave(_to, _from, next) {
-    this.$refs.illustration.animateLeave(next);
+    this.$refs.illustration.animate(params.animation.modes.leave, next);
   },
 };
 </script>
