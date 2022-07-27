@@ -1,9 +1,10 @@
 <template>
   <div class="auth-illustration">
-    <AuthIllustrationEllipse size="small" />
-    <AuthIllustrationEllipse size="medium" />
-    <AuthIllustrationEllipse size="big" />
-    <AuthIllustrationEllipse size="biggest" />
+    <AuthIllustrationEllipse
+      v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
+      :key="idx"
+      :size="size"
+    />
 
     <AuthIllustrationSquare
       v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
@@ -63,6 +64,7 @@ export default {
     },
   ],
   ILLUSTRATION_SQUARES: ['smallest', 'small', 'medium', 'big', 'bigger', 'biggest'],
+  ILLUSTRATION_ELLIPSES: ['small', 'medium', 'big', 'biggest'],
   components: {
     AuthIllustrationEllipse,
     AuthIllustrationIcon,
