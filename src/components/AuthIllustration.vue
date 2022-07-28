@@ -91,7 +91,7 @@ export default {
         backgroundElement,
         containerElement,
         mode,
-        onComplete: next,
+        next,
       });
     },
   },

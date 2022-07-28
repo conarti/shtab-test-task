@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import params from '@/params';
+import PageScroll from '@/helpers/PageScroll';
 import IconsAnimation from '@/helpers/authIllustration/IconsAnimation';
 import BackgroundAnimation from '@/helpers/authIllustration/BackgroundAnimation';
 import EllipsesAnimation from '@/helpers/authIllustration/EllipsesAnimation';
@@ -12,14 +13,21 @@ export default ({
   backgroundElement,
   containerElement,
   mode,
-  onComplete,
+  next,
 }) => {
   const iconsAnimation = new IconsAnimation({ elements: iconElements, mode });
   const ellipsesAnimation = new EllipsesAnimation({ elements: ellipsesElements, mode });
   const backgroundAnimation = new BackgroundAnimation({ elements: backgroundElement, mode });
   const squaresAnimation = new SquaresAnimation({ elements: squaresElements, mode });
 
-  const mainTimeline = gsap.timeline({ onComplete });
+  const mainTimeline = gsap.timeline({
+    onComplete: () => {
+      PageScroll.enable();
+      next();
+    },
+  });
+
+  PageScroll.disable();
 
   if (mode === params.animation.modes.leave) {
     mainTimeline.set(containerElement, { overflow: 'visible' });
