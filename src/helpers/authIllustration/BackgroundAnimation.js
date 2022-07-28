@@ -8,19 +8,14 @@ export default class BackgroundAnimation extends ElementsAnimation {
   }
 
   [params.animation.modes.enter]() {
-    this.timeline.fromTo(this.elements, {
+    this.timeline.from(this.elements, {
       opacity: 0,
       y: '100%',
-    }, {
-      opacity: 1,
-      y: 0,
     });
   }
 
   [params.animation.modes.leave]() {
-    this.timeline.fromTo(this.elements, {
-      left: 0,
-    }, {
+    this.timeline.to(this.elements, {
       left: '-100%',
     });
   }
