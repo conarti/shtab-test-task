@@ -11,12 +11,14 @@ export default class BackgroundAnimation extends ElementsAnimation {
     this.timeline.from(this.elements, {
       opacity: 0,
       y: '100%',
+      ease: 'power2.out',
     });
   }
 
   [params.animation.modes.leave]() {
     this.timeline.to(this.elements, {
       left: '-100%',
+      ease: 'power2.out',
     });
   }
 }
