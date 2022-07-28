@@ -7,19 +7,15 @@ export default class IconsAnimation extends ElementsAnimation {
   }
 
   [params.animation.modes.enter]() {
-    this.timeline.fromTo(this.elements, {
-      opacity: 0,
-    }, {
+    this.timeline.from(this.elements, {
       duration: 0.25,
-      opacity: 1,
+      opacity: 0,
       stagger: 0.1,
     });
   }
 
   [params.animation.modes.leave]() {
-    this.timeline.fromTo(this.elements, {
-      opacity: 1,
-    }, {
+    this.timeline.to(this.elements, {
       duration: 0.25,
       opacity: 0,
       stagger: 0.1,
