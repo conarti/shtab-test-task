@@ -1,34 +1,38 @@
 <template>
   <div class="auth-illustration">
-    <AuthIllustrationEllipse
-      v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
-      :key="idx"
-      :size="size"
-    />
-
-    <AuthIllustrationSquare
-      v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
-      :key="idx"
-      :size="size"
-    />
-
-    <div class="auth-illustration-icons">
-      <AuthIllustrationIcon
-        v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
+    <div class="auth-illustration-container" ref="container">
+      <AuthIllustrationEllipse
+        v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
         :key="idx"
-        :icon="icon"
         :size="size"
-        ref="icons"
       />
+
+      <AuthIllustrationSquare
+        v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
+        :key="idx"
+        :size="size"
+      />
+
+      <div class="auth-illustration-icons">
+        <AuthIllustrationIcon
+          v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
+          :key="idx"
+          :icon="icon"
+          :size="size"
+          ref="icons"
+        />
+      </div>
+
+      <h2 class="auth-illustration-title">
+        shtab.app
+      </h2>
+      <p class="auth-illustration-description">
+        Держите дела в порядке: планируйте и обсуждайте задачи, отслеживайте происходящее в команде
+        и оставайтесь в курсе всех важных мелочей.
+      </p>
     </div>
 
-    <h2 class="auth-illustration-title">
-      shtab.app
-    </h2>
-    <p class="auth-illustration-description">
-      Держите дела в порядке: планируйте и обсуждайте задачи, отслеживайте происходящее в команде
-      и оставайтесь в курсе всех важных мелочей.
-    </p>
+    <div class="auth-illustration-background" ref="background"></div>
   </div>
 </template>
 
@@ -73,8 +77,13 @@ export default {
   methods: {
     animate(mode, next) {
       const iconElements = getElementsFromRefs(this.$refs.icons);
+      const backgroundElement = this.$refs.background;
+      const containerElement = this.$refs.container;
+
       animate({
         iconElements,
+        backgroundElement,
+        containerElement,
         mode,
         onComplete: next,
       });
