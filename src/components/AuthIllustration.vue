@@ -12,6 +12,7 @@
         v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
         :key="idx"
         :size="size"
+        ref="squares"
       />
 
       <div class="auth-illustration-icons">
@@ -79,12 +80,14 @@ export default {
     animate(mode, next) {
       const iconElements = getElementsFromRefs(this.$refs.icons);
       const ellipsesElements = getElementsFromRefs(this.$refs.ellipses);
+      const squaresElements = getElementsFromRefs(this.$refs.squares);
       const backgroundElement = this.$refs.background;
       const containerElement = this.$refs.container;
 
       animate({
         iconElements,
         ellipsesElements,
+        squaresElements,
         backgroundElement,
         containerElement,
         mode,

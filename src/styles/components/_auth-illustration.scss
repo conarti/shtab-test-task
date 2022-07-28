@@ -110,6 +110,7 @@
 
   &-square {
     position: absolute;
+    z-index: 1;
 
     border-radius: 18px;
     filter: blur(8px);
