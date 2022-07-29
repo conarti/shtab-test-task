@@ -1,8 +1,8 @@
 <template>
   <svg
     v-once
-    class="icon"
-    :class="[`icon--is-${size}`, `icon--is-${color}`]"
+    class="app-icon"
+    :class="[`app-icon--is-${size}`, `app-icon--is-${color}`]"
   >
     <use :xlink:href="`/sprite.svg#${this.name}`"></use>
   </svg>
