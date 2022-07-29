@@ -1,4 +1,6 @@
 .auth-illustration {
+  $text-zindex: 10;
+
   position: relative;
   height: 100vh;
 
@@ -18,17 +20,19 @@
   }
 
   &-title {
+    z-index: $text-zindex;
+
     margin-bottom: 10px;
 
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.15em;
-    color: $white;
-
-    opacity: 0.6;
+    color: rgba($white, 0.6);
   }
 
   &-description {
+    z-index: $text-zindex;
+
     font-weight: 400;
     font-size: 28px;
     line-height: 42px;
