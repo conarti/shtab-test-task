@@ -6,6 +6,10 @@ export default {
       colors: ['white'],
       defaultColor: 'white',
     },
+    appButton: {
+      styles: ['primary'],
+      defaultStyle: 'primary',
+    },
     authIllustrationIcon: {
       icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
     },
