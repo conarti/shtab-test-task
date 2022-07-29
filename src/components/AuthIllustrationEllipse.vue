@@ -1,7 +1,7 @@
 <template>
   <div
     class="auth-illustration-ellipse"
-    :class="`auth-illustration-ellipse--is-${size}`"
+    :class="`auth-illustration-ellipse-${size}`"
   ></div>
 </template>
 

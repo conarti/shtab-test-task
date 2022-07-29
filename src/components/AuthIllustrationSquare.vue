@@ -1,7 +1,7 @@
 <template>
   <div
     class="auth-illustration-square"
-    :class="[`auth-illustration-square--is-${size}`]"
+    :class="[`auth-illustration-square-${size}`]"
   ></div>
 </template>
 
