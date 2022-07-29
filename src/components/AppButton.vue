@@ -25,7 +25,9 @@ export default {
       type: String,
       required: false,
       default: params.components.appButton.defaultType,
-      // TODO validation
+      validate(value) {
+        return params.components.appButton.types.includes(value);
+      },
     },
   },
 };

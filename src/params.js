@@ -9,6 +9,11 @@ export default {
     appButton: {
       styles: ['primary'],
       defaultStyle: 'primary',
+      types: [
+        'button',
+        'submit',
+        'reset',
+      ],
       defaultType: 'button',
     },
     appInput: {
