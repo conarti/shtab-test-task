@@ -10,6 +10,10 @@ export default {
       styles: ['primary'],
       defaultStyle: 'primary',
     },
+    appInput: {
+      defaultIdPrefix: 'input',
+      defaultType: 'text',
+    },
     authIllustrationIcon: {
       icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
     },
