@@ -11,7 +11,7 @@
 
 <script>
 import params from '@/params';
-import animateAuthContent from '@/helpers/animateAuthContent';
+import animateAuthContent from '@/helpers/auth/content/animate';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 
 export default {

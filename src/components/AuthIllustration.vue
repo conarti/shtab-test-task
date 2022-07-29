@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import animate from '@/helpers/authIllustration/animate';
+import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
 import AuthIllustrationIcon from '@/components/AuthIllustrationIcon.vue';
@@ -87,7 +87,7 @@ export default {
       const descriptionElement = this.$refs.description;
       const textElements = [descriptionElement, titleElement];
 
-      animate({
+      animateAuthIllustration({
         iconElements,
         ellipsesElements,
         squaresElements,

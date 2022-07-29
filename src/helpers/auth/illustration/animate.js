@@ -1,11 +1,11 @@
 import { gsap } from 'gsap';
 import params from '@/params';
 import PageScroll from '@/helpers/PageScroll';
-import IconsAnimation from '@/helpers/authIllustration/IconsAnimation';
-import BackgroundAnimation from '@/helpers/authIllustration/BackgroundAnimation';
-import EllipsesAnimation from '@/helpers/authIllustration/EllipsesAnimation';
-import SquaresAnimation from '@/helpers/authIllustration/SquaresAnimation';
-import TextAnimation from '@/helpers/authIllustration/TextAnimation';
+import IconsAnimation from '@/helpers/auth/illustration/animations/IconsAnimation';
+import BackgroundAnimation from '@/helpers/auth/illustration/animations/BackgroundAnimation';
+import EllipsesAnimation from '@/helpers/auth/illustration/animations/EllipsesAnimation';
+import SquaresAnimation from '@/helpers/auth/illustration/animations/SquaresAnimation';
+import TextAnimation from '@/helpers/auth/illustration/animations/TextAnimation';
 
 export default ({
   iconElements,
