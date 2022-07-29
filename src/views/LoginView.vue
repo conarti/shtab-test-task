@@ -1,9 +1,9 @@
 <template>
-  <form class="login" @submit.prevent>
-    <h1 class="login-title">Авторизация</h1>
+  <form class="login-view" @submit.prevent>
+    <h1 class="login-view-title">Авторизация</h1>
 
-    <AppInput class="login-input" label="Email" type="email" />
-    <AppInput class="login-input" label="Пароль" type="password" />
+    <AppInput class="login-view-input" label="Email" type="email" />
+    <AppInput class="login-view-input" label="Пароль" type="password" />
 
     <app-button type="submit">Войти</app-button>
   </form>
