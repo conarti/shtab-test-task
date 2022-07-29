@@ -9,6 +9,7 @@ export default {
     appButton: {
       styles: ['primary'],
       defaultStyle: 'primary',
+      defaultType: 'button',
     },
     appInput: {
       defaultIdPrefix: 'input',

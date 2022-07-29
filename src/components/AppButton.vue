@@ -21,6 +21,12 @@ export default {
         return params.components.appButton.styles.includes(value);
       },
     },
+    type: {
+      type: String,
+      required: false,
+      default: params.components.appButton.defaultType,
+      // TODO validation
+    },
   },
 };
 </script>
