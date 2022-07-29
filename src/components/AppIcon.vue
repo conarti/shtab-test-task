@@ -2,7 +2,7 @@
   <svg
     v-once
     class="app-icon"
-    :class="[`app-icon--is-${size}`, `app-icon--is-${color}`]"
+    :class="[`app-icon-${size}`, `app-icon-${color}`]"
   >
     <use :xlink:href="`/sprite.svg#${this.name}`"></use>
   </svg>

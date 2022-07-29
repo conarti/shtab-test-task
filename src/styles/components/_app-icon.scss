@@ -3,32 +3,32 @@
 
   transition: color 0.25s ease-in-out;
 
-  &--is-smallest {
+  &-smallest {
     width: 20px;
     height: 20px;
   }
 
-  &--is-small {
+  &-small {
     width: 30px;
     height: 30px;
   }
 
-  &--is-medium {
+  &-medium {
     width: 53px;
     height: 53px;
   }
 
-  &--is-big {
+  &-big {
     width: 87px;
     height: 87px;
   }
 
-  &--is-biggest {
+  &-biggest {
     width: 152px;
     height: 152px;
   }
 
-  &--is-white {
+  &-white {
     color: $white;
   }
 }
