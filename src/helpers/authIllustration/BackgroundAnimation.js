@@ -1,6 +1,5 @@
-// import { gsap } from 'gsap';
-import ElementsAnimation from '@/helpers/ElementsAnimation';
 import params from '@/params';
+import ElementsAnimation from '@/helpers/ElementsAnimation';
 
 export default class BackgroundAnimation extends ElementsAnimation {
   constructor({ elements, mode }) {
