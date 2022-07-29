@@ -15,7 +15,7 @@ export default ({
   backgroundElement,
   containerElement,
   mode,
-  next,
+  next = () => {},
 }) => {
   const iconsAnimation = new IconsAnimation({ elements: iconElements, mode });
   const ellipsesAnimation = new EllipsesAnimation({ elements: ellipsesElements, mode });
