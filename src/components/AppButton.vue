@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import components from '@/params/components';
+import components from '@/globals/components';
 
 export default {
   name: 'AppButton',

@@ -1,4 +1,4 @@
-import animation from '@/params/animation';
+import animation from '@/globals/animation';
 import ElementsAnimation from '@/helpers/ElementsAnimation';
 
 export default class IconsAnimation extends ElementsAnimation {

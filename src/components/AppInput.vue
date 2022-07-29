@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import components from '@/params/components';
+import components from '@/globals/components';
 import isString from '@/helpers/isString';
 import uniqueId from '@/helpers/uniqueId';
 

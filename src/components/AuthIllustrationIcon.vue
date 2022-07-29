@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import components from '@/params/components';
+import components from '@/globals/components';
 import AppIcon from '@/components/AppIcon.vue';
 
 export default {

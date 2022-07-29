@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import animation from '@/params/animation';
+import animation from '@/globals/animation';
 import PageScroll from '@/helpers/PageScroll';
 import IconsAnimation from '@/helpers/auth/illustration/animations/IconsAnimation';
 import BackgroundAnimation from '@/helpers/auth/illustration/animations/BackgroundAnimation';

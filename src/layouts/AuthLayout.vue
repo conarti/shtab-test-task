@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import animation from '@/params/animation';
+import animation from '@/globals/animation';
 import animateAuthContent from '@/helpers/auth/content/animate';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 

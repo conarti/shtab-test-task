@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import animation from '@/params/animation';
+import animation from '@/globals/animation';
 
 export default (contentElement, mode) => {
   const animations = {

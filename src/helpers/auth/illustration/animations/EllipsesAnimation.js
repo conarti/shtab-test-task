@@ -1,5 +1,5 @@
 import ElementsAnimation from '@/helpers/ElementsAnimation';
-import animation from '@/params/animation';
+import animation from '@/globals/animation';
 
 export default class EllipsesAnimation extends ElementsAnimation {
   constructor({ elements, mode }) {

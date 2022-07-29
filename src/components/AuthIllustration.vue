@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import components from '@/params/components';
+import components from '@/globals/components';
 import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
