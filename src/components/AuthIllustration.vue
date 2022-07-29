@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import components from '@/params/components';
 import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
@@ -48,9 +48,9 @@ import AuthIllustrationSquare from '@/components/AuthIllustrationSquare.vue';
 
 export default {
   name: 'AuthIllustration',
-  ILLUSTRATION_ICONS: params.components.authIllustration.icons,
-  ILLUSTRATION_SQUARES: params.components.authIllustration.squares,
-  ILLUSTRATION_ELLIPSES: params.components.authIllustration.ellipses,
+  ILLUSTRATION_ICONS: components.authIllustration.icons,
+  ILLUSTRATION_SQUARES: components.authIllustration.squares,
+  ILLUSTRATION_ELLIPSES: components.authIllustration.ellipses,
   components: {
     AuthIllustrationEllipse,
     AuthIllustrationIcon,

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import components from '@/params/components';
 import AppIcon from '@/components/AppIcon.vue';
 
 export default {
@@ -24,14 +24,14 @@ export default {
       type: String,
       required: true,
       validate(value) {
-        return params.components.authIllustrationIcon.icons.includes(value);
+        return components.authIllustrationIcon.icons.includes(value);
       },
     },
     size: {
       type: String,
       required: true,
       validate(value) {
-        return params.components.appIcon.sizes.includes(value);
+        return components.appIcon.sizes.includes(value);
       },
     },
   },

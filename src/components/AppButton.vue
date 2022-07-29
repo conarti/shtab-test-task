@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import components from '@/params/components';
 
 export default {
   name: 'AppButton',
@@ -16,17 +16,17 @@ export default {
     style: {
       type: String,
       required: false,
-      default: params.components.appButton.defaultStyle,
+      default: components.appButton.defaultStyle,
       validate(value) {
-        return params.components.appButton.styles.includes(value);
+        return components.appButton.styles.includes(value);
       },
     },
     type: {
       type: String,
       required: false,
-      default: params.components.appButton.defaultType,
+      default: components.appButton.defaultType,
       validate(value) {
-        return params.components.appButton.types.includes(value);
+        return components.appButton.types.includes(value);
       },
     },
   },

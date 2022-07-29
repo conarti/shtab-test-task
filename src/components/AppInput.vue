@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import components from '@/params/components';
 import isString from '@/helpers/isString';
 import uniqueId from '@/helpers/uniqueId';
 
@@ -34,7 +34,7 @@ export default {
     id: {
       type: String,
       required: false,
-      default: uniqueId(params.components.appInput.defaultIdPrefix),
+      default: uniqueId(components.appInput.defaultIdPrefix),
       validate(value) {
         return isString(value);
       },
@@ -42,9 +42,9 @@ export default {
     type: {
       type: String,
       required: false,
-      default: params.components.appInput.defaultType,
+      default: components.appInput.defaultType,
       validate(value) {
-        return isString(value) && params.components.appInput.types.includes(value);
+        return isString(value) && components.appInput.types.includes(value);
       },
     },
   },

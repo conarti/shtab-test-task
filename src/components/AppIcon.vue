@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import components from '@/params/components';
 
 export default {
   name: 'AppIcon',
@@ -21,17 +21,17 @@ export default {
     size: {
       type: String,
       required: false,
-      default: params.components.appIcon.defaultSize,
+      default: components.appIcon.defaultSize,
       validate(value) {
-        return params.components.appIcon.sizes.includes(value);
+        return components.appIcon.sizes.includes(value);
       },
     },
     color: {
       type: String,
       required: false,
-      default: params.components.appIcon.defaultColor,
+      default: components.appIcon.defaultColor,
       validate(value) {
-        return params.components.appIcon.colors.includes(value);
+        return components.appIcon.colors.includes(value);
       },
     },
   },
