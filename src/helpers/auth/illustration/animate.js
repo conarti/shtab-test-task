@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import params from '@/params';
+import animation from '@/params/animation';
 import PageScroll from '@/helpers/PageScroll';
 import IconsAnimation from '@/helpers/auth/illustration/animations/IconsAnimation';
 import BackgroundAnimation from '@/helpers/auth/illustration/animations/BackgroundAnimation';
@@ -32,7 +32,7 @@ export default ({
 
   PageScroll.disable();
 
-  if (mode === params.animation.modes.leave) {
+  if (mode === animation.modes.leave) {
     mainTimeline.set(containerElement, { overflow: 'visible' });
   }
 

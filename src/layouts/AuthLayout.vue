@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import params from '@/params';
+import animation from '@/params/animation';
 import animateAuthContent from '@/helpers/auth/content/animate';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 
@@ -21,13 +21,13 @@ export default {
   },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
-      animateAuthContent(vm.$refs.content, params.animation.modes.enter);
-      vm.$refs.illustration.animate(params.animation.modes.enter);
+      animateAuthContent(vm.$refs.content, animation.modes.enter);
+      vm.$refs.illustration.animate(animation.modes.enter);
     });
   },
   beforeRouteLeave(_to, _from, next) {
-    animateAuthContent(this.$refs.content, params.animation.modes.leave);
-    this.$refs.illustration.animate(params.animation.modes.leave, next);
+    animateAuthContent(this.$refs.content, animation.modes.leave);
+    this.$refs.illustration.animate(animation.modes.leave, next);
   },
 };
 </script>

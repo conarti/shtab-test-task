@@ -1,4 +1,4 @@
-import params from '@/params';
+import animation from '@/params/animation';
 import ElementsAnimation from '@/helpers/ElementsAnimation';
 
 export default class SquaresAnimation extends ElementsAnimation {
@@ -6,14 +6,14 @@ export default class SquaresAnimation extends ElementsAnimation {
     super({ elements, mode });
   }
 
-  [params.animation.modes.enter]() {
+  [animation.modes.enter]() {
     this.timeline.from(this.elements, {
       opacity: 0,
       stagger: 0.15,
     });
   }
 
-  [params.animation.modes.leave]() {
+  [animation.modes.leave]() {
     this.timeline.to(this.elements, {
       opacity: 0,
       stagger: 0.15,

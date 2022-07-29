@@ -1,12 +1,12 @@
 import ElementsAnimation from '@/helpers/ElementsAnimation';
-import params from '@/params';
+import animation from '@/params/animation';
 
 export default class EllipsesAnimation extends ElementsAnimation {
   constructor({ elements, mode }) {
     super({ elements, mode });
   }
 
-  [params.animation.modes.enter]() {
+  [animation.modes.enter]() {
     this.timeline.from(this.elements, {
       opacity: 0,
       y: '100%',
@@ -14,7 +14,7 @@ export default class EllipsesAnimation extends ElementsAnimation {
     });
   }
 
-  [params.animation.modes.leave]() {
+  [animation.modes.leave]() {
     this.timeline.to(this.elements, {
       opacity: 0,
       y: '100%',

@@ -1,4 +1,4 @@
-import params from '@/params';
+import animation from '@/params/animation';
 import ElementsAnimation from '@/helpers/ElementsAnimation';
 
 export default class TextAnimation extends ElementsAnimation {
@@ -6,7 +6,7 @@ export default class TextAnimation extends ElementsAnimation {
     super({ elements, mode });
   }
 
-  [params.animation.modes.enter]() {
+  [animation.modes.enter]() {
     this.timeline.from(this.elements, {
       opacity: 0,
       y: '50px',
@@ -15,7 +15,7 @@ export default class TextAnimation extends ElementsAnimation {
     });
   }
 
-  [params.animation.modes.leave]() {
+  [animation.modes.leave]() {
     this.timeline.fromTo(
       this.elements,
       {

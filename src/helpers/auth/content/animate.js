@@ -1,14 +1,14 @@
 import { gsap } from 'gsap';
-import params from '@/params';
+import animation from '@/params/animation';
 
 export default (contentElement, mode) => {
   const animations = {
-    [params.animation.modes.enter]() {
+    [animation.modes.enter]() {
       gsap.from(contentElement, {
         opacity: 0,
       });
     },
-    [params.animation.modes.leave]() {
+    [animation.modes.leave]() {
       gsap.to(contentElement, {
         opacity: 0,
       });

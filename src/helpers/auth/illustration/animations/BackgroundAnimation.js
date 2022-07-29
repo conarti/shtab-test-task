@@ -1,4 +1,4 @@
-import params from '@/params';
+import animation from '@/params/animation';
 import ElementsAnimation from '@/helpers/ElementsAnimation';
 
 export default class BackgroundAnimation extends ElementsAnimation {
@@ -6,7 +6,7 @@ export default class BackgroundAnimation extends ElementsAnimation {
     super({ elements, mode });
   }
 
-  [params.animation.modes.enter]() {
+  [animation.modes.enter]() {
     this.timeline.from(this.elements, {
       opacity: 0,
       y: '100%',
@@ -14,7 +14,7 @@ export default class BackgroundAnimation extends ElementsAnimation {
     });
   }
 
-  [params.animation.modes.leave]() {
+  [animation.modes.leave]() {
     this.timeline.to(this.elements, {
       left: '-100%',
       ease: 'power2.out',
