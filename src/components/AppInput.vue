@@ -43,9 +43,8 @@ export default {
       type: String,
       required: false,
       default: params.components.appInput.defaultType,
-      // TODO correct validation
       validate(value) {
-        return isString(value);
+        return isString(value) && params.components.appInput.types.includes(value);
       },
     },
   },

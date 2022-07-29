@@ -13,6 +13,16 @@ export default {
     },
     appInput: {
       defaultIdPrefix: 'input',
+      types: [
+        'email',
+        'hidden',
+        'number',
+        'password',
+        'search',
+        'tel',
+        'text',
+        'url',
+      ],
       defaultType: 'text',
     },
     authIllustrationIcon: {
