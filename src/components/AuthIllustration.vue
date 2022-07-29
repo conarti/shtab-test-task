@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import params from '@/params';
 import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
@@ -47,30 +48,9 @@ import AuthIllustrationSquare from '@/components/AuthIllustrationSquare.vue';
 
 export default {
   name: 'AuthIllustration',
-  ILLUSTRATION_ICONS: [
-    {
-      icon: 'alarm',
-      size: 'smallest',
-    },
-    {
-      icon: 'lock',
-      size: 'small',
-    },
-    {
-      icon: 'chat',
-      size: 'medium',
-    },
-    {
-      icon: 'fire',
-      size: 'big',
-    },
-    {
-      icon: 'shtab-logo',
-      size: 'biggest',
-    },
-  ],
-  ILLUSTRATION_SQUARES: ['smallest', 'small', 'medium', 'big', 'bigger', 'biggest'],
-  ILLUSTRATION_ELLIPSES: ['small', 'medium', 'big', 'biggest'],
+  ILLUSTRATION_ICONS: params.components.authIllustration.icons,
+  ILLUSTRATION_SQUARES: params.components.authIllustration.squares,
+  ILLUSTRATION_ELLIPSES: params.components.authIllustration.ellipses,
   components: {
     AuthIllustrationEllipse,
     AuthIllustrationIcon,
