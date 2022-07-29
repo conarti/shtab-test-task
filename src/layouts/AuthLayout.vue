@@ -1,6 +1,6 @@
 <template>
   <div class="auth-layout">
-    <div class="auth-layout__content">
+    <div class="auth-layout__content" ref="content">
       <router-view />
     </div>
     <div class="auth-layout__illustration">
@@ -11,6 +11,7 @@
 
 <script>
 import params from '@/params';
+import animateAuthContent from '@/helpers/animateAuthContent';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 
 export default {
@@ -20,10 +21,12 @@ export default {
   },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
+      animateAuthContent(vm.$refs.content, params.animation.modes.enter);
       vm.$refs.illustration.animate(params.animation.modes.enter);
     });
   },
   beforeRouteLeave(_to, _from, next) {
+    animateAuthContent(this.$refs.content, params.animation.modes.leave);
     this.$refs.illustration.animate(params.animation.modes.leave, next);
   },
 };
