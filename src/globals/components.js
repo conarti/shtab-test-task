@@ -66,4 +66,21 @@ export default {
   appSquareWithIcon: {
     icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
   },
+  profileView: {
+    ellipses: [
+      {
+        size: 'small',
+        name: 'small-1',
+      },
+      {
+        size: 'small',
+        name: 'small-2',
+      },
+      {
+        size: 'medium',
+        name: 'medium',
+      },
+    ],
+    blurrySquares: ['small', 'medium', 'bigger'],
+  },
 };
