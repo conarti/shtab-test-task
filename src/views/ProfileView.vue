@@ -29,40 +29,17 @@
         {{ $t('profileView.logoutBtn') }}
       </app-button>
     </div>
-
-    <div class="profile-view-illustration">
-      <AppEllipse
-        v-for="({ size, name }) in $options.ELLIPSES"
-        :key="name"
-        :size="size"
-        :class="`profile-view-illustration-ellipse-${name}`"
-      />
-
-      <AppBlurrySquare
-        v-for="(size) in $options.BLURRY_SQUARES"
-        :key="size"
-        :size="size"
-        :class="`profile-view-illustration-square-${size}`"
-      />
-    </div>
   </div>
 </template>
 
 <script>
-import components from '@/globals/components';
 import AppButton from '@/components/AppButton.vue';
-import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
-import AppEllipse from '@/components/AppEllipse.vue';
 import AppIcon from '@/components/AppIcon.vue';
 
 export default {
   name: 'ProfileView',
-  ELLIPSES: components.profileView.ellipses,
-  BLURRY_SQUARES: components.profileView.blurrySquares,
   components: {
     AppButton,
-    AppBlurrySquare,
-    AppEllipse,
     AppIcon,
   },
 };

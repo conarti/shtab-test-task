@@ -39,44 +39,4 @@
     font-size: 16px;
     font-weight: 400;
   }
-
-  &-illustration {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-  }
-
-  // TODO change positions to percents
-  &-illustration-ellipse-small-1 {
-    top: 236px;
-    left: -122px;
-  }
-
-  &-illustration-ellipse-small-2 {
-    top: 351px;
-    left: 310px;
-  }
-
-  &-illustration-ellipse-medium {
-    top: 156px;
-    left: 875px;
-  }
-
-  &-illustration-square-small {
-    top: 73px;
-    left: 501px;
-  }
-
-  &-illustration-square-medium {
-    top: 261px;
-    left: 541px;
-  }
-
-  &-illustration-square-bigger {
-    top: 82px;
-    left: 928px;
-  }
 }

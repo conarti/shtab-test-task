@@ -25,6 +25,22 @@
         <router-view />
       </div>
 
+      <div class="main-layout-illustration">
+        <AppEllipse
+          v-for="({ size, name }) in $options.ELLIPSES"
+          :key="name"
+          :size="size"
+          :class="`main-layout-illustration-ellipse-${name}`"
+        />
+
+        <AppBlurrySquare
+          v-for="(size) in $options.BLURRY_SQUARES"
+          :key="size"
+          :size="size"
+          :class="`main-layout-illustration-square-${size}`"
+        />
+      </div>
+
       <div
         ref="contentBackground"
         class="main-layout-content-bg"
@@ -34,11 +50,20 @@
 </template>
 
 <script>
+import components from '@/globals/components';
 import animation from '@/globals/animation';
 import animateMainLayout from '@/helpers/main-layout/animate';
+import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
+import AppEllipse from '@/components/AppEllipse.vue';
 
 export default {
   name: 'MainLayout',
+  ELLIPSES: components.mainLayout.ellipses,
+  BLURRY_SQUARES: components.mainLayout.blurrySquares,
+  components: {
+    AppBlurrySquare,
+    AppEllipse,
+  },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
       animateMainLayout({
