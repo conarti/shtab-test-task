@@ -29,6 +29,7 @@
         <AppEllipse
           v-for="({ size, name }) in $options.ELLIPSES"
           :key="name"
+          ref="ellipses"
           :size="size"
           :class="`main-layout-illustration-ellipse-${name}`"
         />
@@ -36,6 +37,7 @@
         <AppBlurrySquare
           v-for="(size) in $options.BLURRY_SQUARES"
           :key="size"
+          ref="blurrySquares"
           :size="size"
           :class="`main-layout-illustration-square-${size}`"
         />
@@ -53,6 +55,7 @@
 import components from '@/globals/components';
 import animation from '@/globals/animation';
 import animateMainLayout from '@/helpers/main-layout/animate';
+import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
 import AppEllipse from '@/components/AppEllipse.vue';
 
@@ -70,6 +73,8 @@ export default {
         headerElement: vm.$refs.header,
         backgroundElement: vm.$refs.contentBackground,
         contentContainerElement: vm.$refs.contentContainer,
+        ellipsesElements: getElementsFromRefs(vm.$refs.ellipses),
+        blurrySquaresElements: getElementsFromRefs(vm.$refs.blurrySquares),
         mode: animation.modes.enter,
       });
     });
@@ -79,6 +84,8 @@ export default {
       headerElement: this.$refs.header,
       backgroundElement: this.$refs.contentBackground,
       contentContainerElement: this.$refs.contentContainer,
+      ellipsesElements: getElementsFromRefs(this.$refs.ellipses),
+      blurrySquaresElements: getElementsFromRefs(this.$refs.blurrySquares),
       mode: animation.modes.leave,
       next,
     });
