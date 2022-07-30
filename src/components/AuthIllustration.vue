@@ -4,7 +4,7 @@
       ref="container"
       class="auth-illustration-container"
     >
-      <AuthIllustrationEllipse
+      <AppEllipse
         v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
         :key="idx"
         ref="ellipses"
@@ -54,8 +54,8 @@
 import components from '@/globals/components';
 import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
-import AuthIllustrationEllipse from '@/components/AuthIllustrationEllipse.vue';
-import AuthIllustrationIcon from '@/components/AuthIllustrationIcon.vue';
+import AppEllipse from '@/components/AppEllipse.vue';
+import AuthIllustrationIcon from '@/components/AppSquareWithIcon.vue';
 import AuthIllustrationSquare from '@/components/AuthIllustrationSquare.vue';
 
 export default {
@@ -64,7 +64,7 @@ export default {
   ILLUSTRATION_SQUARES: components.authIllustration.squares,
   ILLUSTRATION_ELLIPSES: components.authIllustration.ellipses,
   components: {
-    AuthIllustrationEllipse,
+    AppEllipse,
     AuthIllustrationIcon,
     AuthIllustrationSquare,
   },

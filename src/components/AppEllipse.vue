@@ -1,13 +1,13 @@
 <template>
   <div
-    class="auth-illustration-ellipse"
-    :class="`auth-illustration-ellipse-${size}`"
+    class="app-ellipse"
+    :class="`app-ellipse-${size}`"
   />
 </template>
 
 <script>
 export default {
-  name: 'AuthIllustrationEllipse',
+  name: 'AppEllipse',
   props: {
     size: {
       type: String,
