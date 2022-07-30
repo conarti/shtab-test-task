@@ -1,12 +1,15 @@
 <template>
   <div class="auth-layout">
-    <div class="auth-layout__content" ref="content">
+    <div
+      ref="content"
+      class="auth-layout__content"
+    >
       <router-view />
     </div>
     <div class="auth-layout__illustration">
       <AuthIllustration ref="illustration" />
     </div>
-</div>
+  </div>
 </template>
 
 <script>

@@ -2,7 +2,7 @@
   <div
     class="auth-illustration-square"
     :class="[`auth-illustration-square-${size}`]"
-  ></div>
+  />
 </template>
 
 <script>

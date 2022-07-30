@@ -4,7 +4,7 @@
     class="app-icon"
     :class="[`app-icon-${size}`, `app-icon-${color}`]"
   >
-    <use :xlink:href="`/sprite.svg#${this.name}`"></use>
+    <use :xlink:href="`/sprite.svg#${name}`" />
   </svg>
 </template>
 

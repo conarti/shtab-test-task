@@ -7,10 +7,10 @@
     >
       {{ label }}
       <input
+        :id="id"
         class="app-input-form"
         :type="type"
-        :id="id"
-      />
+      >
     </label>
   </div>
 </template>

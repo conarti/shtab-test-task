@@ -1,40 +1,52 @@
 <template>
   <div class="auth-illustration">
-    <div class="auth-illustration-container" ref="container">
+    <div
+      ref="container"
+      class="auth-illustration-container"
+    >
       <AuthIllustrationEllipse
         v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
         :key="idx"
-        :size="size"
         ref="ellipses"
+        :size="size"
       />
 
       <AuthIllustrationSquare
         v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
         :key="idx"
-        :size="size"
         ref="squares"
+        :size="size"
       />
 
       <div class="auth-illustration-icons">
         <AuthIllustrationIcon
           v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
           :key="idx"
+          ref="icons"
           :icon="icon"
           :size="size"
-          ref="icons"
         />
       </div>
 
-      <h2 class="auth-illustration-title" ref="title">
+      <h2
+        ref="title"
+        class="auth-illustration-title"
+      >
         shtab.app
       </h2>
-      <p class="auth-illustration-description" ref="description">
+      <p
+        ref="description"
+        class="auth-illustration-description"
+      >
         Держите дела в порядке: планируйте и обсуждайте задачи, отслеживайте происходящее в команде
         и оставайтесь в курсе всех важных мелочей.
       </p>
     </div>
 
-    <div class="auth-illustration-background" ref="background"></div>
+    <div
+      ref="background"
+      class="auth-illustration-background"
+    />
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div
     class="auth-illustration-ellipse"
     :class="`auth-illustration-ellipse-${size}`"
-  ></div>
+  />
 </template>
 
 <script>
