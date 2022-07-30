@@ -41,6 +41,14 @@ export default {
       });
     });
   },
+  beforeRouteLeave(_to, _from, next) {
+    animateMainLayout({
+      headerElement: this.$refs.header,
+      backgroundElement: this.$refs.contentBackground,
+      mode: animation.modes.leave,
+      next,
+    });
+  },
   computed: {
     pageTitle() {
       return this.$t(`pageNames.${this.$route.meta.title}`);
