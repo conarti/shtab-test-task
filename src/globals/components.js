@@ -2,6 +2,9 @@ export default {
   appBlurrySquare: {
     sizes: ['smallest', 'small', 'medium', 'big', 'bigger', 'biggest'],
   },
+  appEllipse: {
+    sizes: ['small', 'medium', 'big', 'biggest'],
+  },
   appIcon: {
     sizes: ['smallest', 'small', 'medium', 'big', 'biggest'],
     defaultSize: 'medium',
