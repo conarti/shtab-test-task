@@ -11,7 +11,7 @@
         :size="size"
       />
 
-      <AuthIllustrationSquare
+      <AppBlurrySquare
         v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
         :key="idx"
         ref="squares"
@@ -56,7 +56,7 @@ import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AppEllipse from '@/components/AppEllipse.vue';
 import AppSquareWithIcon from '@/components/AppSquareWithIcon.vue';
-import AuthIllustrationSquare from '@/components/AppBlurrySquare.vue';
+import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
 
 export default {
   name: 'AuthIllustration',
@@ -66,7 +66,7 @@ export default {
   components: {
     AppEllipse,
     AppSquareWithIcon,
-    AuthIllustrationSquare,
+    AppBlurrySquare,
   },
   methods: {
     animate(mode, next) {
