@@ -17,19 +17,28 @@
     </nav>
     <div class="main-layout-content">
       <router-view />
+
+      <div
+        ref="contentBackground"
+        class="main-layout-content-bg"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import animation from '@/globals/animation';
-import animateMainLayoutHeader from '@/helpers/main-layout/header/animate';
+import animateMainLayout from '@/helpers/main-layout/animate';
 
 export default {
   name: 'MainLayout',
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
-      animateMainLayoutHeader(vm.$refs.header, animation.modes.enter);
+      animateMainLayout({
+        headerElement: vm.$refs.header,
+        backgroundElement: vm.$refs.contentBackground,
+        mode: animation.modes.enter,
+      });
     });
   },
   computed: {

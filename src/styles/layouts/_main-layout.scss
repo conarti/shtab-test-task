@@ -18,4 +18,18 @@
   &-header-title {
     color: $logo-text;
   }
+
+  &-content {
+    position: relative;
+  }
+
+  &-content-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background: $bg-gradient;
+  }
 }
