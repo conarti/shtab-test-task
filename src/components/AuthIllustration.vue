@@ -35,14 +35,13 @@
         ref="title"
         class="auth-illustration-title"
       >
-        shtab.app
+        {{ $t('authIllustration.title') }}
       </h2>
       <p
         ref="description"
         class="auth-illustration-description"
       >
-        Держите дела в порядке: планируйте и обсуждайте задачи, отслеживайте происходящее в команде
-        и оставайтесь в курсе всех важных мелочей.
+        {{ $t('authIllustration.description') }}
       </p>
     </div>
 
