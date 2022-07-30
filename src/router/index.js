@@ -10,6 +10,9 @@ const routes = [
         path: '',
         name: 'profile',
         component: () => import(/* webpackChunkName: "profile" */ '@/views/ProfileView.vue'),
+        meta: {
+          title: 'profile',
+        },
       },
     ],
   },

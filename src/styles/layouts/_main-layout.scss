@@ -1,0 +1,21 @@
+.main-layout {
+  &-header {
+    padding: 65px;
+  }
+
+  &-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+  }
+
+  &-header-logo {
+    width: 128px;
+    height: 30px;
+  }
+
+  &-header-title {
+    color: $logo-text;
+  }
+}
