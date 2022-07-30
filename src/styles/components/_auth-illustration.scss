@@ -112,4 +112,31 @@
     left: 687px;
     top: 187px;
   }
+
+  &-square-with-icon-alarm {
+    top: 46%;
+    left: 530px;
+  }
+
+  &-square-with-icon-lock {
+    top: 30%;
+    left: 58px;
+  }
+
+  &-square-with-icon-chat {
+    top: 40%;
+    left: 103px;
+  }
+
+  &-square-with-icon-fire {
+    top: 28%;
+    left: 546px;
+  }
+
+  &-square-with-icon-shtab-logo {
+    top: 24%;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
 }

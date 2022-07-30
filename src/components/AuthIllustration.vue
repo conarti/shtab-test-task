@@ -26,6 +26,7 @@
           :key="idx"
           ref="icons"
           :icon="icon"
+          :class="`auth-illustration-square-with-icon-${icon}`"
           :size="size"
         />
       </div>
