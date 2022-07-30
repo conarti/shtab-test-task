@@ -4,22 +4,22 @@
     @submit.prevent
   >
     <h1 class="login-view-title">
-      Авторизация
+      {{ $t('loginView.title') }}
     </h1>
 
     <AppInput
       class="login-view-input"
-      label="Email"
+      :label="$t('loginView.inputLabels.email')"
       type="email"
     />
     <AppInput
       class="login-view-input"
-      label="Пароль"
+      :label="$t('loginView.inputLabels.password')"
       type="password"
     />
 
     <app-button type="submit">
-      Войти
+      {{ $t('loginView.button') }}
     </app-button>
   </form>
 </template>
