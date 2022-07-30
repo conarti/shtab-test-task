@@ -8,6 +8,7 @@
         v-for="(size, idx) in $options.ELLIPSES"
         :key="idx"
         ref="ellipses"
+        :class="`auth-illustration-ellipse-${size}`"
         :size="size"
       />
 

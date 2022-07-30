@@ -6,37 +6,21 @@
   background: $illustration-ellipse-bg;
 
   &-small {
-    left: 282px;
-    top: 434px;
-    z-index: 4;
-
     width: 700px;
     height: 700px;
   }
 
   &-medium {
-    left: 74px;
-    top: 250px;
-    z-index: 1;
-
     width: 935px;
     height: 935px;
   }
 
   &-big {
-    left: -134px;
-    top: 66px;
-    z-index: 2;
-
     width: 935px;
     height: 935px;
   }
 
   &-biggest {
-    left: -249px;
-    top: -73px;
-    z-index: 3;
-
     width: 1090px;
     height: 1090px;
   }

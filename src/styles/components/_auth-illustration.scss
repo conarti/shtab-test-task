@@ -58,4 +58,28 @@
     bottom: 0;
     z-index: 5;
   }
+
+  &-ellipse-small {
+    left: 282px;
+    top: 434px;
+    z-index: 4;
+  }
+
+  &-ellipse-medium {
+    left: 74px;
+    top: 250px;
+    z-index: 1;
+  }
+
+  &-ellipse-big {
+    left: -134px;
+    top: 66px;
+    z-index: 2;
+  }
+
+  &-ellipse-biggest {
+    left: -249px;
+    top: -73px;
+    z-index: 3;
+  }
 }
