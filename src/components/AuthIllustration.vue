@@ -5,14 +5,14 @@
       class="auth-illustration-container"
     >
       <AppEllipse
-        v-for="(size, idx) in $options.ILLUSTRATION_ELLIPSES"
+        v-for="(size, idx) in $options.ELLIPSES"
         :key="idx"
         ref="ellipses"
         :size="size"
       />
 
       <AppBlurrySquare
-        v-for="(size, idx) in $options.ILLUSTRATION_SQUARES"
+        v-for="(size, idx) in $options.SQUARES"
         :key="idx"
         ref="squares"
         :size="size"
@@ -20,7 +20,7 @@
 
       <div class="auth-illustration-icons">
         <AppSquareWithIcon
-          v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
+          v-for="({ icon, size }, idx) in $options.ICONS"
           :key="idx"
           ref="icons"
           :icon="icon"
@@ -60,9 +60,9 @@ import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
 
 export default {
   name: 'AuthIllustration',
-  ILLUSTRATION_ICONS: components.authIllustration.icons,
-  ILLUSTRATION_SQUARES: components.authIllustration.squares,
-  ILLUSTRATION_ELLIPSES: components.authIllustration.ellipses,
+  ICONS: components.authIllustration.icons,
+  SQUARES: components.authIllustration.squares,
+  ELLIPSES: components.authIllustration.ellipses,
   components: {
     AppEllipse,
     AppSquareWithIcon,
