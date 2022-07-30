@@ -12,6 +12,10 @@
 
   transition: opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 
+  &-sm {
+    padding: 10px;
+  }
+
   &-primary {
     color: $white;
 
@@ -21,6 +25,22 @@
 
     &:hover {
       box-shadow: 0 20px 90px rgba($primary, 0.25);
+    }
+  }
+
+  &-white-outline {
+    color: $white;
+
+    // TODO: place into bg variable, same as below
+    // $app-square-with-icon-bg
+    background: linear-gradient(180deg, rgba(79, 70, 229, 0.4) 0%, rgba(79, 70, 229, 0) 100%);
+
+    box-shadow: inset 0 0 0 2px $white, 0 30px 60px rgba($primary, 0.25);
+
+    transition: background 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px $white, 0 20px 60px rgba($primary, 0.65);
     }
   }
 }

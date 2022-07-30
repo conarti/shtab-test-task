@@ -1,7 +1,12 @@
 <template>
   <button
     class="app-button"
-    :class="`app-button-${style}`"
+    :class="[
+      `app-button-${theme}`,
+      {
+        [`app-button-${size}`]: hasSize
+      }
+    ]"
   >
     <slot />
   </button>
@@ -13,12 +18,12 @@ import components from '@/globals/components';
 export default {
   name: 'AppButton',
   props: {
-    style: {
+    theme: {
       type: String,
       required: false,
-      default: components.appButton.defaultStyle,
+      default: components.appButton.defaultTheme,
       validate(value) {
-        return components.appButton.styles.includes(value);
+        return components.appButton.themes.includes(value);
       },
     },
     type: {
@@ -28,6 +33,19 @@ export default {
       validate(value) {
         return components.appButton.types.includes(value);
       },
+    },
+    size: {
+      type: String,
+      required: false,
+      default: components.appButton.defaultSize,
+      validate(value) {
+        return components.appButton.sizes.includes(value);
+      },
+    },
+  },
+  computed: {
+    hasSize() {
+      return this.size !== null;
     },
   },
 };

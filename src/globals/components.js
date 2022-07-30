@@ -12,14 +12,16 @@ export default {
     defaultColor: 'white',
   },
   appButton: {
-    styles: ['primary'],
-    defaultStyle: 'primary',
+    themes: ['primary', 'white-outline'],
+    defaultTheme: 'primary',
     types: [
       'button',
       'submit',
       'reset',
     ],
     defaultType: 'button',
+    sizes: ['sm'],
+    defaultSize: null,
   },
   appInput: {
     defaultIdPrefix: 'input',
