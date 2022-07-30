@@ -13,6 +13,15 @@
         :value="modelValue"
         @input="updateModelValue"
       >
+      <template v-if="hasErrors">
+        <span
+          v-for="(error, idx) in errors"
+          :key="idx"
+          class="app-input-error-message"
+        >
+          {{ error }}
+        </span>
+      </template>
     </label>
   </div>
 </template>
@@ -56,6 +65,14 @@ export default {
         return isString(value) && components.appInput.types.includes(value);
       },
     },
+    errors: {
+      type: Array,
+      required: false,
+      default: () => [],
+      validate(value) {
+        return value.length === 0 || value.every((error) => isString(error));
+      },
+    },
   },
   emits: {
     'update:model-value': (value) => isString(value),
@@ -68,6 +85,9 @@ export default {
   computed: {
     hasLabel() {
       return this.label !== null;
+    },
+    hasErrors() {
+      return this.errors.length > 0;
     },
   },
   methods: {
