@@ -14,7 +14,7 @@
 
 <script>
 import animation from '@/globals/animation';
-import animateAuthContent from '@/helpers/auth/content/animate';
+import animateAuthLayoutContent from '@/helpers/auth-layout/content/animate';
 import AuthIllustration from '@/components/AuthIllustration.vue';
 
 export default {
@@ -24,12 +24,12 @@ export default {
   },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
-      animateAuthContent(vm.$refs.content, animation.modes.enter);
+      animateAuthLayoutContent(vm.$refs.content, animation.modes.enter);
       vm.$refs.illustration.animate(animation.modes.enter);
     });
   },
   beforeRouteLeave(_to, _from, next) {
-    animateAuthContent(this.$refs.content, animation.modes.leave);
+    animateAuthLayoutContent(this.$refs.content, animation.modes.leave);
     this.$refs.illustration.animate(animation.modes.leave, next);
   },
 };

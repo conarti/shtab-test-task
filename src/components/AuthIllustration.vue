@@ -54,7 +54,7 @@
 
 <script>
 import components from '@/globals/components';
-import animateAuthIllustration from '@/helpers/auth/illustration/animate';
+import animateAuthIllustration from '@/helpers/auth-layout/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AppEllipse from '@/components/AppEllipse.vue';
 import AppSquareWithIcon from '@/components/AppSquareWithIcon.vue';
