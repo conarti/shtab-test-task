@@ -10,6 +10,8 @@
         :id="id"
         class="app-input-form"
         :type="type"
+        :value="modelValue"
+        @input="updateModelValue"
       >
     </label>
   </div>
@@ -23,6 +25,13 @@ import uniqueId from '@/helpers/uniqueId';
 export default {
   name: 'AppInput',
   props: {
+    modelValue: {
+      type: [String, null],
+      required: true,
+      validate(value) {
+        return isString(value);
+      },
+    },
     label: {
       type: String,
       required: false,
@@ -48,6 +57,9 @@ export default {
       },
     },
   },
+  emits: {
+    'update:model-value': (value) => isString(value),
+  },
   data() {
     return {
       value: null,
@@ -56,6 +68,11 @@ export default {
   computed: {
     hasLabel() {
       return this.label !== null;
+    },
+  },
+  methods: {
+    updateModelValue(event) {
+      this.$emit('update:model-value', event.target.value);
     },
   },
 };
