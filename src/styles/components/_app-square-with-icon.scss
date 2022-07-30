@@ -1,0 +1,53 @@
+.app-square-with-icon {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+
+  background: $app-square-with-icon-bg;
+
+  // TODO move position to 'auth-illustration' styles
+  &-alarm {
+    top: 46%;
+    left: 530px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  &-lock {
+    top: 30%;
+    left: 58px;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  &-chat {
+    top: 40%;
+    left: 103px;
+
+    width: 83px;
+    height: 83px;
+  }
+
+  &-fire {
+    top: 28%;
+    left: 546px;
+
+    width: 117px;
+    height: 117px;
+  }
+
+  &-shtab-logo {
+    top: 24%;
+    left: 50%;
+
+    width: 242px;
+    height: 242px;
+
+    transform: translateX(-50%);
+  }
+}

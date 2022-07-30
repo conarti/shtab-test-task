@@ -19,7 +19,7 @@
       />
 
       <div class="auth-illustration-icons">
-        <AuthIllustrationIcon
+        <AppSquareWithIcon
           v-for="({ icon, size }, idx) in $options.ILLUSTRATION_ICONS"
           :key="idx"
           ref="icons"
@@ -55,8 +55,8 @@ import components from '@/globals/components';
 import animateAuthIllustration from '@/helpers/auth/illustration/animate';
 import getElementsFromRefs from '@/helpers/getElementsFromRefs';
 import AppEllipse from '@/components/AppEllipse.vue';
-import AuthIllustrationIcon from '@/components/AppSquareWithIcon.vue';
-import AuthIllustrationSquare from '@/components/AuthIllustrationSquare.vue';
+import AppSquareWithIcon from '@/components/AppSquareWithIcon.vue';
+import AuthIllustrationSquare from '@/components/AppBlurrySquare.vue';
 
 export default {
   name: 'AuthIllustration',
@@ -65,7 +65,7 @@ export default {
   ILLUSTRATION_ELLIPSES: components.authIllustration.ellipses,
   components: {
     AppEllipse,
-    AuthIllustrationIcon,
+    AppSquareWithIcon,
     AuthIllustrationSquare,
   },
   methods: {

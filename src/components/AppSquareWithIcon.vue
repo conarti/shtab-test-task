@@ -1,7 +1,7 @@
 <template>
   <div
-    class="auth-illustration-icon"
-    :class="`auth-illustration-icon-${icon}`"
+    class="app-square-with-icon"
+    :class="`app-square-with-icon-${icon}`"
   >
     <AppIcon
       :name="icon"
@@ -15,7 +15,7 @@ import components from '@/globals/components';
 import AppIcon from '@/components/AppIcon.vue';
 
 export default {
-  name: 'AuthLayoutIllustrationSquareWithIcon',
+  name: 'AppSquareWithIcon',
   components: {
     AppIcon,
   },
@@ -24,7 +24,7 @@ export default {
       type: String,
       required: true,
       validate(value) {
-        return components.authIllustrationIcon.icons.includes(value);
+        return components.appSquareWithIcon.icons.includes(value);
       },
     },
     size: {

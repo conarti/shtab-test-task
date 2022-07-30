@@ -59,59 +59,6 @@
     z-index: 5;
   }
 
-  &-icon {
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-
-    background: $illustration-icon-bg;
-  }
-
-  &-icon-alarm {
-    top: 46%;
-    left: 530px;
-
-    width: 50px;
-    height: 50px;
-  }
-
-  &-icon-lock {
-    top: 30%;
-    left: 58px;
-
-    width: 60px;
-    height: 60px;
-  }
-
-  &-icon-chat {
-    top: 40%;
-    left: 103px;
-
-    width: 83px;
-    height: 83px;
-  }
-
-  &-icon-fire {
-    top: 28%;
-    left: 546px;
-
-    width: 117px;
-    height: 117px;
-  }
-
-  &-icon-shtab-logo {
-    top: 24%;
-    left: 50%;
-
-    width: 242px;
-    height: 242px;
-
-    transform: translateX(-50%);
-  }
-
   &-square {
     position: absolute;
     z-index: 1;

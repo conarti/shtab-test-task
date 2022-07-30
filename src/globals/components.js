@@ -55,7 +55,7 @@ export default {
     squares: ['smallest', 'small', 'medium', 'big', 'bigger', 'biggest'],
     ellipses: ['small', 'medium', 'big', 'biggest'],
   },
-  authIllustrationIcon: {
+  appSquareWithIcon: {
     icons: ['alarm', 'chat', 'fire', 'lock', 'shtab-logo'],
   },
 };
