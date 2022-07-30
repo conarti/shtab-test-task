@@ -61,7 +61,7 @@ import AppSquareWithIcon from '@/components/AppSquareWithIcon.vue';
 import AppBlurrySquare from '@/components/AppBlurrySquare.vue';
 
 export default {
-  name: 'AuthIllustration',
+  name: 'AuthLayoutIllustration',
   ICONS: components.authIllustration.icons,
   SQUARES: components.authIllustration.squares,
   ELLIPSES: components.authIllustration.ellipses,

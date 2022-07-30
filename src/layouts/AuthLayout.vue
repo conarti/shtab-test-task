@@ -7,7 +7,7 @@
       <router-view />
     </div>
     <div class="auth-layout__illustration">
-      <AuthIllustration ref="illustration" />
+      <AuthLayoutIllustration ref="illustration" />
     </div>
   </div>
 </template>
@@ -15,12 +15,12 @@
 <script>
 import animation from '@/globals/animation';
 import animateAuthLayoutContent from '@/helpers/auth-layout/content/animate';
-import AuthIllustration from '@/components/AuthIllustration.vue';
+import AuthLayoutIllustration from '@/components/AuthLayoutIllustration.vue';
 
 export default {
   name: 'AuthLayout',
   components: {
-    AuthIllustration,
+    AuthLayoutIllustration,
   },
   beforeRouteEnter(_to, _from, next) {
     next((vm) => {
