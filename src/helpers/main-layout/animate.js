@@ -4,6 +4,7 @@ import animation from '@/globals/animation';
 export default ({
   headerElement,
   backgroundElement,
+  contentContainerElement,
   mode,
   next = () => {},
 }) => {
@@ -16,6 +17,11 @@ export default ({
       gsap.from(backgroundElement, {
         top: '-180px',
       });
+      gsap.from(contentContainerElement, {
+        opacity: 0,
+        y: '100px',
+        scale: '0.75',
+      });
     },
     [animation.modes.leave]() {
       gsap.to(headerElement, {
@@ -25,6 +31,11 @@ export default ({
       gsap.to(backgroundElement, {
         top: '100%',
         opacity: 0,
+      });
+      gsap.to(contentContainerElement, {
+        opacity: 0,
+        y: '100px',
+        scale: '0.75',
         onComplete: next,
       });
     },

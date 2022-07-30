@@ -15,8 +15,15 @@
         </h2>
       </div>
     </nav>
-    <div class="main-layout-content">
-      <router-view />
+    <div
+      class="main-layout-content"
+    >
+      <div
+        ref="contentContainer"
+        class="main-layout-content-container"
+      >
+        <router-view />
+      </div>
 
       <div
         ref="contentBackground"
@@ -37,6 +44,7 @@ export default {
       animateMainLayout({
         headerElement: vm.$refs.header,
         backgroundElement: vm.$refs.contentBackground,
+        contentContainerElement: vm.$refs.contentContainer,
         mode: animation.modes.enter,
       });
     });
@@ -45,6 +53,7 @@ export default {
     animateMainLayout({
       headerElement: this.$refs.header,
       backgroundElement: this.$refs.contentBackground,
+      contentContainerElement: this.$refs.contentContainer,
       mode: animation.modes.leave,
       next,
     });
