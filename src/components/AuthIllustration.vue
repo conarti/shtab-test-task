@@ -16,6 +16,7 @@
         v-for="(size, idx) in $options.SQUARES"
         :key="idx"
         ref="squares"
+        :class="`auth-illustration-blurry-square-${size}`"
         :size="size"
       />
 
