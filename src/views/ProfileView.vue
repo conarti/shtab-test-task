@@ -78,7 +78,7 @@ export default {
     }),
     logout() {
       this.$store.commit('auth/logout');
-      this.$router.push({ name: 'login' });
+      this.$router.replace({ name: 'login' });
     },
   },
 };

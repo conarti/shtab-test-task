@@ -55,7 +55,7 @@ export default {
           username: this.username,
           password: this.password,
         });
-        this.$router.push({ name: 'profile' });
+        this.$router.replace({ name: 'profile' });
       } catch (error) {
         const { password, username } = error.response.data;
 
