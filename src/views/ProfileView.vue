@@ -1,16 +1,30 @@
 <template>
   <div class="profile-view">
-    <div class="profile-view-content">
+    <div
+      v-if="!isProfileNotLoaded"
+      class="profile-view-content"
+    >
       <div
         class="profile-view-avatar"
       >
-        <AppIcon
-          name="no-photo"
-          color="muted"
-        />
+        <img
+          v-if="hasAvatar"
+          class="profile-view-avatar-image"
+          :src="avatar"
+          alt="avatar"
+        >
+        <div
+          v-else
+          class="profile-view-avatar-placeholder"
+        >
+          <AppIcon
+            name="no-photo"
+            color="muted"
+          />
+        </div>
       </div>
       <h1 class="profile-view-name">
-        Front Test
+        {{ fullName }}
       </h1>
 
       <div class="profile-view-info-field">
@@ -18,7 +32,7 @@
           Username:
         </div>
         <div class="profile-view-info-value">
-          didayi3273@satedly.com
+          {{ email }}
         </div>
       </div>
 
@@ -34,6 +48,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import AppButton from '@/components/AppButton.vue';
 import AppIcon from '@/components/AppIcon.vue';
 
@@ -43,7 +58,24 @@ export default {
     AppButton,
     AppIcon,
   },
+  computed: {
+    ...mapGetters('user', {
+      isProfileNotLoaded: 'isNotLoaded',
+      hasAvatar: 'hasAvatar',
+      fullName: 'fullName',
+      avatar: 'avatar',
+      email: 'email',
+    }),
+  },
+  created() {
+    if (this.isProfileNotLoaded) {
+      this.fetchProfile();
+    }
+  },
   methods: {
+    ...mapActions('user', {
+      fetchProfile: 'fetch',
+    }),
     logout() {
       this.$store.commit('auth/logout');
       this.$router.push({ name: 'login' });

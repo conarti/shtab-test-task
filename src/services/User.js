@@ -8,8 +8,12 @@ export default class User {
     return token;
   }
 
-  static async getProfile() {
-    const response = await api.get(apiEndpoints.user.profile);
-    return response.data;
+  static async fetchProfile() {
+    const { data } = await api.get(apiEndpoints.user.profile);
+    return {
+      avatar: data.avatar,
+      fullName: data.full_name,
+      email: data.email,
+    };
   }
 }
