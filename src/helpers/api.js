@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiInstance = axios.create({
-  baseURL: 'https://my.shtab.app/api/',
+  baseURL: process.env.VUE_APP_API_URL,
 });
 
 const createSetAuthInterceptor = (hasAuth, token) => (config) => {
