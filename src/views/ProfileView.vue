@@ -25,6 +25,7 @@
       <app-button
         theme="white-outline"
         size="sm"
+        @click="logout"
       >
         {{ $t('profileView.logoutBtn') }}
       </app-button>
@@ -41,6 +42,12 @@ export default {
   components: {
     AppButton,
     AppIcon,
+  },
+  methods: {
+    logout() {
+      this.$store.commit('auth/logout');
+      this.$router.push({ name: 'login' });
+    },
   },
 };
 </script>
