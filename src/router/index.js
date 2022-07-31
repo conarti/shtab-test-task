@@ -1,10 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import checkAuth from '@/router/middlewares/checkAuth';
 
 const routes = [
   {
     path: '',
     name: 'main-layout',
     component: () => import(/* webpackChunkName: "auth-layout" */ '@/layouts/MainLayout.vue'),
+    meta: {
+      auth: true,
+    },
     children: [
       {
         path: '',
@@ -20,6 +24,9 @@ const routes = [
     path: '/auth',
     name: 'auth-layout',
     component: () => import(/* webpackChunkName: "auth-layout" */ '@/layouts/AuthLayout.vue'),
+    meta: {
+      auth: false,
+    },
     children: [
       {
         path: 'login',
@@ -34,5 +41,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+router.beforeEach(checkAuth);
 
 export default router;
