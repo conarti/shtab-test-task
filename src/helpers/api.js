@@ -5,9 +5,9 @@ const apiInstance = axios.create({
 });
 
 const createSetAuthInterceptor = (hasAuth, token) => (config) => {
-  if (hasAuth) {
+  if (hasAuth()) {
     // eslint-disable-next-line no-param-reassign
-    config.headers.Authorization = `Token ${token}`;
+    config.headers.Authorization = `Token ${token()}`;
   } else {
     // eslint-disable-next-line no-param-reassign
     delete config.headers.Authorization;

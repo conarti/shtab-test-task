@@ -8,8 +8,8 @@ import store from './store';
 
 require.context('./assets/icons', true, /\.svg$/); // import all icons for webpack
 
-const hasAuth = store.getters['auth/hasAuth'];
-const token = store.getters['auth/token'];
+const hasAuth = () => store.getters['auth/hasAuth'];
+const token = () => store.getters['auth/token'];
 const setAuthCb = createSetAuthInterceptor(hasAuth, token);
 
 api.interceptors.request.use(setAuthCb);
