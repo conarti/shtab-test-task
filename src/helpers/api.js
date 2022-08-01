@@ -1,4 +1,5 @@
 import axios from 'axios';
+import getErrorMessageFromResponse from '@/helpers/getErrorMessageFromResponse';
 
 const apiInstance = axios.create({
   baseURL: process.env.VUE_APP_API_URL,
@@ -23,7 +24,10 @@ const createAlertInterceptor = (addAlert) => {
   const alertSuccessInterceptor = (response) => response;
 
   const alertErrorInterceptor = (error) => {
-    addAlert(error.response.data);
+    const messages = getErrorMessageFromResponse(error.response.data);
+
+    messages.forEach((message) => addAlert(message));
+
     return Promise.reject(error);
   };
 
