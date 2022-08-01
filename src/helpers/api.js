@@ -19,7 +19,19 @@ const createSetAuthInterceptor = (hasAuth, token) => {
   apiInstance.interceptors.request.use(authInterceptor);
 };
 
+const createAlertInterceptor = (addAlert) => {
+  const alertSuccessInterceptor = (response) => response;
+
+  const alertErrorInterceptor = (error) => {
+    addAlert(error.response.data);
+    return Promise.reject(error);
+  };
+
+  apiInstance.interceptors.response.use(alertSuccessInterceptor, alertErrorInterceptor);
+};
+
 export {
   createSetAuthInterceptor,
+  createAlertInterceptor,
 };
 export default apiInstance;

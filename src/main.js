@@ -1,6 +1,6 @@
 import './styles/index.scss';
 import { createApp } from 'vue';
-import { createSetAuthInterceptor } from './helpers/api';
+import { createAlertInterceptor, createSetAuthInterceptor } from './helpers/api';
 import i18n from './i18n';
 import App from './App.vue';
 import router from './router';
@@ -10,7 +10,10 @@ require.context('./assets/icons', true, /\.svg$/); // import all icons for webpa
 
 const hasAuth = () => store.getters['auth/hasAuth'];
 const token = () => store.getters['auth/token'];
+const addAlert = (message) => store.dispatch('alerts/add', message);
+
 createSetAuthInterceptor(hasAuth, token);
+createAlertInterceptor(addAlert);
 
 createApp(App)
   .use(store)
