@@ -1,0 +1,17 @@
+/* alerts-list */
+
+.alerts-list-move,
+.alerts-list-enter-active,
+.alerts-list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.alerts-list-enter-from,
+.alerts-list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.alerts-list-leave-active {
+  position: absolute;
+}
