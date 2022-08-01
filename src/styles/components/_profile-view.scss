@@ -1,4 +1,11 @@
 .profile-view {
+  &-spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 135px;
+  }
+
   &-content {
     position: relative;
     left: 50%;

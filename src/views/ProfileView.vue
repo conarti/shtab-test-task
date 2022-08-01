@@ -1,49 +1,63 @@
 <template>
   <div class="profile-view">
-    <div
-      v-if="!isProfileNotLoaded"
-      class="profile-view-content"
+    <transition
+      name="fade"
+      mode="out-in"
     >
       <div
-        class="profile-view-avatar"
+        v-if="isProfileNotLoaded"
+        class="profile-view-spinner-container"
       >
-        <img
-          v-if="hasAvatar"
-          class="profile-view-avatar-image"
-          :src="avatar"
-          alt="avatar"
-        >
+        <AppSpinner
+          color="white"
+        />
+      </div>
+
+      <div
+        v-else
+        class="profile-view-content"
+      >
         <div
-          v-else
-          class="profile-view-avatar-placeholder"
+          class="profile-view-avatar"
         >
-          <AppIcon
-            name="no-photo"
-            color="muted"
-          />
+          <img
+            v-if="hasAvatar"
+            class="profile-view-avatar-image"
+            :src="avatar"
+            alt="avatar"
+          >
+          <div
+            v-else
+            class="profile-view-avatar-placeholder"
+          >
+            <AppIcon
+              name="no-photo"
+              color="muted"
+            />
+          </div>
         </div>
-      </div>
-      <h1 class="profile-view-name">
-        {{ fullName }}
-      </h1>
+        <h1 class="profile-view-name">
+          {{ fullName }}
+        </h1>
 
-      <div class="profile-view-info-field">
-        <div class="profile-view-info-key">
-          Username:
+        <div class="profile-view-info-field">
+          <div class="profile-view-info-key">
+            Username:
+          </div>
+          <div class="profile-view-info-value">
+            {{ email }}
+          </div>
         </div>
-        <div class="profile-view-info-value">
-          {{ email }}
-        </div>
-      </div>
 
-      <app-button
-        theme="white-outline"
-        size="sm"
-        @click="logout"
-      >
-        {{ $t('profileView.logoutBtn') }}
-      </app-button>
-    </div>
+        <app-button
+          theme="white-outline"
+          size="sm"
+          @click="logout"
+        >
+          {{ $t('profileView.logoutBtn') }}
+        </app-button>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -51,12 +65,14 @@
 import { mapActions, mapGetters } from 'vuex';
 import AppButton from '@/components/AppButton.vue';
 import AppIcon from '@/components/AppIcon.vue';
+import AppSpinner from '@/components/AppSpinner.vue';
 
 export default {
   name: 'ProfileView',
   components: {
     AppButton,
     AppIcon,
+    AppSpinner,
   },
   computed: {
     ...mapGetters('user', {
