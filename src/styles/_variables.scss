@@ -10,4 +10,8 @@ $app-square-with-icon-bg: linear-gradient(180deg, rgba(79, 70, 229, 0.4) 0%, rgb
 $illustration-square-bg: linear-gradient(180deg, rgba(107, 99, 235, 0.4) 0%, rgba(79, 70, 229, 0) 100%);
 $illustration-ellipse-bg: linear-gradient(140.4deg, rgba(255, 255, 255, 0.01) 16.29%, rgba(255, 255, 255, 0) 63.17%);
 
+$base-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+
 $controls-bg: #f3f4f6;
+
+$alerts-zindex: 10000000;
