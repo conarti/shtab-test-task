@@ -37,6 +37,10 @@ export default {
     ],
     defaultType: 'text',
   },
+  appSpinner: {
+    defaultColor: 'primary',
+    colors: ['primary', 'white'],
+  },
   authIllustration: {
     icons: [
       {
